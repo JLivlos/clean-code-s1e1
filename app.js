@@ -8,7 +8,7 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput = document.querySelector(".add-section_task"); //Add a new task.
+var taskInput = document.querySelector(".add-section__task"); //Add a new task.
 var addButton = document.querySelector(".add-section__button"); //first button
 var incompleteTaskHolder = document.querySelector(".incompleted-tasks"); //ul of #incompleteTasks
 var completedTasksHolder = document.querySelector(".completed-tasks"); //completed-tasks
@@ -18,6 +18,7 @@ var completedTasksHolder = document.querySelector(".completed-tasks"); //complet
 var createNewTaskElement = function(taskString) {
 
     var listItem = document.createElement("li");
+    listItem.className = 'list-item incompleted-tasks__item';
 
     //input (checkbox)
     var checkBox = document.createElement("input"); //checkbx
@@ -37,9 +38,9 @@ var createNewTaskElement = function(taskString) {
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
-    checkBox.className = 'incompleted-tasks__checkbox';
+    checkBox.className = 'task-checkbox';
     editInput.type = "text";
-    editInput.className = "task incompleted-tasks__task";
+    editInput.className = "task task-text";
 
 
     editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
