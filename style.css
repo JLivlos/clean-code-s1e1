@@ -24,6 +24,7 @@
   }
   
 }
+
 .main {
   display: block;
   width: 500px;
@@ -62,6 +63,7 @@
 .button:hover {
   color: #3a3A3a;
 }
+
 /* Heading */
 .section-title {
   color: #333;
